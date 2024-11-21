@@ -1,13 +1,13 @@
 name: 为了快速解决你遇到的问题, 请使用此模板进行提问
 description: 运行wzry.py过程遇到的各种问题
 title: "[windows][雷电模拟器][问题描述]"
-labels: ["运行","模拟器","WZRY"]
+labels: ["安装配置","模拟器","对战","礼包","组队"]
 body:
   - type: markdown
     attributes:
       value: |
-        - 💬请礼貌**友善**的提问
-        - 🌟你可以为本项目点个[star](https://github.com/cndaqiang/WZRY), 我会更愉快的回答你的问题
+        - 🥰请礼貌**友善**的提问
+        - ✨你可以为本项目点个star, 我会更愉快的回答你的问题
   - type: checkboxes
     attributes:
       label: "请在阅读完下面的内容后再进行提问:"
@@ -132,7 +132,7 @@ body:
       label: "模拟器设置页面"
       description: "请截图模拟器设置页面并粘贴到此处"
       value: |
-        如果的问题不涉及模拟器, 可以不填写此输入框.
+        如果问题不涉及模拟器, 可以不填写此输入框.
         如果你涉及到连接不了模拟器，无法控制模拟器的问题，请在此处粘贴你的模拟器设置页面.
         需要确定你开启了ADB以及ADB的端口以及分辨率和dpi的设置.
         非`960x540`分辨率`dpi=160`的设备, 请自行解决.
