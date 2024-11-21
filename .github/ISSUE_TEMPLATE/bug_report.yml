@@ -29,7 +29,8 @@ body:
         - WZRY <= 2.2.6-stable
         - AutoWZRY >= 2.2.9a1
         - 其他
-      required: true
+      validations:
+        required: true
   - type: textarea
     attributes:
       label: "配置文件: `config.win.yaml`"
