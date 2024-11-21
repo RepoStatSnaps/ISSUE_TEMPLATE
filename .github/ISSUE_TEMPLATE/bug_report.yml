@@ -1,20 +1,36 @@
 name: 为了快速解决你遇到的问题, 请使用此模板进行提问 
 description: 运行wzry.py过程遇到的各种问题
-title: 'bug: <title>'
-labels: "[windows][雷电模拟器][问题描述]"
+title: '[windows][雷电模拟器][问题描述]'
+labels: "label是什么"
 body:
   - type: markdown
     attributes:
-      value: '😊请礼貌**友善**的提问'
+      value: |
+      - '💬请礼貌**友善**的提问'
+      - '🌟你可以为本项目点个[star](https://github.com/cndaqiang/WZRY), 我会更愉快的回答你的问题'
   - type: checkboxes
     attributes:
-      label: '根据你的实际情况进行勾选:'
-      description: 'Appium 1-related issues are going to be ignored as this version has reached its end of life.'
+      label: '请在阅读完下面的内容后再进行提问:'
+      description: '[使用文档WZRY.doc](https://cndaqiang.github.io/wzry.doc/)包含最新版本的使用教程、问题收录、使用经验. 每天都有更新. 请在阅读后再进行提问.'
       options:
       - label: '我已阅读全新的[项目主页](https://cndaqiang.github.io/wzry.doc/)'
         required: true
       - label: '我已阅读全新的[安装指南](https://cndaqiang.github.io/wzry.doc/guide/install/)'
         required: true
+      - label: '我已搜索[常见问题收录](https://cndaqiang.github.io/wzry.doc/qa/qa), 并未找到类似问题'
+        required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: '你当前正在使用的程序以及版本号'
+      description: "请采用最新的[stable版本](https://github.com/cndaqiang/WZRY/releases)进行尝试."
+      options:
+        - WZRY >= 2.2.8
+        - WZRY == 2.2.8-stable
+        - WZRY <= 2.2.6-stable
+        - AutoWZRY >= 2.2.9a1
+        - 其他
+    
   - type: checkboxes
     attributes:
       label: 'Is the component officially supported by the Appium team?'
@@ -31,14 +47,23 @@ body:
         required: true
   - type: textarea
     attributes:
-      label: 'Current Behavior'
-      description: 'Describe the problem you are experiencing.  **Please do not paste your logs here.**  Screenshots are welcome.'
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: 'Expected Behavior'
-      description: 'Describe what you expect to happen instead.'
+      label: '配置文件: `config.win.yaml`'
+      description: '请在此处上传你的配置文件`config.win.yaml`截图或者粘贴到此处'
+      value: |
+                - "mynode: 0"
+                - "totalnode: 2"
+                - "multiprocessing: True"
+                - "BlueStackdir: C:\Program Files\BlueStacks_nxt"
+                - "BlueStack_Instance:"
+                - "    0: Pie64_1"
+                - "    1: Pie64"
+                - "BlueStack_Windows:"
+                - "    0: BlueStacks1"
+                - "    1: BlueStacks0"
+                - "LINK_dict:"
+                - "    0: Android:///127.0.0.1:5565"
+                - "    1: Android:///127.0.0.1:5555"
+                - "prefix: wzry"
     validations:
       required: true
   - type: textarea
