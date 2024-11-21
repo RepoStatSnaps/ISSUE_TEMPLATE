@@ -39,7 +39,7 @@ body:
   - type: textarea
     attributes:
       label: "配置文件: config.win.yaml"
-      description: "请在此处填写你的配置文件或截图粘贴到此处"
+      description: "请在此处填写或上传你的配置文件, 亦可截图粘贴到此处"
       value: |
         # 例如
         mynode: 0
@@ -64,8 +64,9 @@ body:
   - type: textarea
     attributes:
       label: "控制文件: WZRY.0.运行模式.txt"
-      description: "请在此处填写你的控制文件或截图粘贴到此处"
+      description: "请在此处填写或上传你的控制文件, 亦可截图粘贴到此处"
       value: |
+        # 例如
         uptime=23.9
         self.对战时间=[1.0,uptime]
         self.限时组队时间=uptime
@@ -89,3 +90,59 @@ body:
         self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "备战英雄线路", savepos=True)
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: "执行结果: result.0.txt"
+      description: "请在此处填写或上传你的执行结果, 亦可截图粘贴到此处"
+      value: |
+        # 例如
+        [11-17 05:00:02]wzry0>控制端(linux)
+        [11-17 05:00:02]wzry0>客户端(lin_docker)
+        [11-17 05:00:02]wzry0>ADB =(/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/static/adb/linux/adb)
+        [11-17 05:00:02]wzry0>LINK(Android:///127.0.0.1:5555)
+        [11-17 05:00:02]wzry0>LINKhead(Android:///127.0.0.1)
+        [11-17 05:00:02]wzry0>LINKtype(android)
+        [11-17 05:00:02]wzry0>LINKURL(127.0.0.1:5555)
+        [11-17 05:00:02]wzry0>LINKport(5555)
+        [11-17 05:00:02]wzry0>Android:///127.0.0.1:5555:开始第1/3次连接
+        [11-17 05:00:10]wzry0>Android:///127.0.0.1:5555:链接失败
+        [11-17 05:00:14]wzry0>没有找到ADB设备127.0.0.1:5555
+        [11-17 05:10:41]wzry0>RUNINFO
+        [11-17 05:10:41]wzry0>	 组队模式 = True
+        [11-17 05:10:41]wzry0>	 房主 = True
+        [11-17 05:10:41]wzry0>	 对战模式 = 5v5匹配
+        [11-17 05:10:41]wzry0>	 对战时间 = [1.0,23.9]
+        [11-17 05:10:41]wzry0>	 限时组队时间 = 23.9
+        [11-17 05:10:41]wzry0>	 runstep = 119
+        [11-17 05:10:41]wzry0>	 jinristep = 1
+        [11-17 05:10:41]wzry0>	 青铜段位 = True
+        [11-17 05:10:41]wzry0>	 标准模式 = True
+        [11-17 05:10:41]wzry0>	 触摸对战 = True
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "运行目录截图"
+      description: "请截图运行目录并粘贴到此处"
+      value: |
+        例如
+        ![image](https://github.com/user-attachments/assets/a2eb219b-f485-44fe-bff2-a2a757f3999c)
+  - type: textarea
+    attributes:
+      label: "模拟器设置页面"
+      description: "请截图模拟器设置页面并粘贴到此处"
+      value: |
+        如果的问题不涉及模拟器, 可以不填写此输入框.
+        如果你涉及到连接不了模拟器，无法控制模拟器的问题，请在此处粘贴你的模拟器设置页面.
+        需要确定你开启了ADB以及ADB的端口以及分辨率和dpi的设置.
+        非`960x540`分辨率`dpi=160`的设备, 请自行解决.
+        模拟器的安装路径, 多开页面截图等
+        例如这个截图就非常充分
+        ![image](https://github.com/user-attachments/assets/ce5ca8ce-c1a2-4ac0-a2e3-e1b3ad74f5e0)
+  - type: textarea
+    attributes:
+      label: "游戏页面页面"
+      description: "请截图游戏页面并粘贴到此处"
+      value: |
+        如果在游戏过程中遇到问题, 请在此处粘贴**出现问题的画面**
+        比如, 无法进入对战时, 游戏内显示的什么画面
