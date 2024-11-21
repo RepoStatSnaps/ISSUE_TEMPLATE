@@ -16,8 +16,8 @@ body:
         - label: "我已阅读全新的[项目主页](https://cndaqiang.github.io/wzry.doc/)"
         - label: "我已阅读全新的[安装指南](https://cndaqiang.github.io/wzry.doc/guide/install/)"
         - label: "我已搜索[常见问题收录](https://cndaqiang.github.io/wzry.doc/qa/qa), 并未找到类似问题"
-      validations:
-        required: false
+    validations:
+      required: false
   - type: dropdown
     id: version
     attributes:
@@ -29,8 +29,8 @@ body:
         - WZRY <= 2.2.6-stable
         - AutoWZRY >= 2.2.9a1
         - 其他
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: "配置文件: `config.win.yaml`"
@@ -50,5 +50,5 @@ body:
         -     0: Android:///127.0.0.1:5565
         -     1: Android:///127.0.0.1:5555
         - prefix: wzry"
-      validations:
-        required: true
+    validations:
+      required: true
