@@ -31,10 +31,11 @@ body:
         - 其他
     validations:
       required: true
-  - type: text
+  - type: textarea
     id: other_version
     attributes:
       label: "如果选择了*其他*，请输入具体版本"
+    value: "WZRY-2.2.8"
   - type: textarea
     attributes:
       label: "配置文件: `config.win.yaml`"
