@@ -1,7 +1,7 @@
 name: 为了快速解决你遇到的问题, 请使用此模板进行提问
 description: 运行wzry.py过程遇到的各种问题
 title: "[windows][雷电模拟器][问题描述]"
-labels: "WZRY-RUN-Error"
+labels: ["运行","模拟器","WZRY"]
 body:
   - type: markdown
     attributes:
@@ -34,13 +34,14 @@ body:
   - type: textarea
     id: other_version
     attributes:
-      label: "如果选择了*其他*，请输入具体版本"
+      label: "如果选择了其他，请输入具体版本"
       value: "WZRY-2.2.8"
   - type: textarea
     attributes:
-      label: "配置文件: `config.win.yaml`"
-      description: "请在此处上传你的配置文件`config.win.yaml`截图或者粘贴到此处"
+      label: "配置文件: config.win.yaml"
+      description: "请在此处上传你的配置文件config.win.yaml截图或者粘贴到此处"
       value: |
+        # 例如
         mynode: 0
         totalnode: 2
         multiprocessing: True
