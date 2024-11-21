@@ -1,17 +1,19 @@
-name: 🐞 Bug Report
-description: File a new bug report
+name: 为了快速解决你遇到的问题, 请使用此模板进行提问 
+description: 运行wzry.py过程遇到的各种问题
 title: 'bug: <title>'
-labels: [Bug, Needs Triage]
+labels: "[windows][雷电模拟器][问题描述]"
 body:
   - type: markdown
     attributes:
-      value: ':stop_sign: _For support questions, please visit [http://discuss.appium.io](http://discuss.appium.io) instead._'
+      value: '😊请礼貌**友善**的提问'
   - type: checkboxes
     attributes:
-      label: 'Do I have the most recent component updates?'
+      label: '根据你的实际情况进行勾选:'
       description: 'Appium 1-related issues are going to be ignored as this version has reached its end of life.'
       options:
-      - label: 'I use the most recent available driver/plugin and server versions'
+      - label: '我已阅读全新的[项目主页](https://cndaqiang.github.io/wzry.doc/)'
+        required: true
+      - label: '我已阅读全新的[安装指南](https://cndaqiang.github.io/wzry.doc/guide/install/)'
         required: true
   - type: checkboxes
     attributes:
