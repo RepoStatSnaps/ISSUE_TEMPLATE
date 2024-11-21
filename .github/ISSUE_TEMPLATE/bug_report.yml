@@ -53,6 +53,6 @@ body:
         LINK_dict:
             0: Android:///127.0.0.1:5565
             1: Android:///127.0.0.1:5555
-        prefix: wzry"
+        prefix: wzry
     validations:
       required: true
