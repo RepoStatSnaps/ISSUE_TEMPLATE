@@ -6,16 +6,18 @@ body:
   - type: markdown
     attributes:
       value: |
-        - 🥰请礼貌**友善**的提问
-        - ✨你可以为本项目点个star, 我会更愉快的回答你的问题
+        - 🥰请礼貌**友善**的提问.
+        - ✨为本项目点个star, 我会更愉快的回答你的问题.
+        - 📚快去阅读最新的[使用教程、问题收录、经验分享](https://wzry-doc.pages.dev/).
   - type: checkboxes
     attributes:
       label: "请在阅读完下面的内容后再进行提问:"
-      description: "[使用文档WZRY.doc](https://cndaqiang.github.io/wzry.doc/)包含最新版本的使用教程、问题收录、使用经验. 每天都有更新. 请在阅读后再进行提问."
+      description: "[使用文档WZRY.doc](https://wzry-doc.pages.dev/)每天都有更新, 提问题前先阅读这些内容."
       options:
-        - label: "我已阅读全新的[项目主页](https://cndaqiang.github.io/wzry.doc/)"
-        - label: "我已阅读全新的[安装指南](https://cndaqiang.github.io/wzry.doc/guide/install/)"
-        - label: "我已搜索[常见问题收录](https://cndaqiang.github.io/wzry.doc/qa/qa), 并未找到类似问题"
+        - label: "🌱已阅读[安装指南](https://wzry-doc.pages.dev/guide/install/)"
+        - label: "🌱已阅读[配置文件的说明](https://wzry-doc.pages.dev/guide/config/)"
+        - label: "🌱已阅读[控制文件的使用方法: 运行时间、礼包功能、对战模式、选择英雄等](https://wzry-doc.pages.dev/guide/file/)"
+        - label: "🌱已阅读[常见问题](https://wzry-doc.pages.dev/qa/qa)"
     validations:
       required: false
   - type: dropdown
@@ -37,12 +39,15 @@ body:
     id: other_version
     attributes:
       label: "如果选择了其他，请输入具体版本"
-      value: "WZRY-2.2.6"
+      value: |
+        WZRY-2.2.8
+        airtest-mobileauto 2.0.13
   - type: textarea
     attributes:
       label: "配置文件: config.win.yaml"
       description: "请在此处填写或上传你的配置文件, 亦可截图粘贴到此处"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         # 例如
         mynode: 0
         totalnode: 2
@@ -134,11 +139,10 @@ body:
         ![image](https://github.com/user-attachments/assets/a2eb219b-f485-44fe-bff2-a2a757f3999c)
   - type: textarea
     attributes:
-      label: "模拟器设置页面"
-      description: "请截图模拟器设置页面并粘贴到此处"
+      label: "模拟器设置截图"
+      description: "如果问题不涉及模拟器, 可以不填写此输入框."
       value: |
         [此处支持: 填写文本、上传文件、粘贴截图]
-        如果问题不涉及模拟器, 可以不填写此输入框.
         如果你涉及到连接不了模拟器，无法控制模拟器的问题，请在此处粘贴你的模拟器设置页面.
         需要确定你开启了ADB以及ADB的端口以及分辨率和dpi的设置.
         非`960x540`分辨率`dpi=160`的设备, 请自行解决.
@@ -147,7 +151,7 @@ body:
         ![image](https://github.com/user-attachments/assets/ce5ca8ce-c1a2-4ac0-a2e3-e1b3ad74f5e0)
   - type: textarea
     attributes:
-      label: "游戏页面页面"
+      label: "游戏页面截图"
       description: "请截图游戏页面并粘贴到此处"
       value: |
         [此处支持: 填写文本、上传文件、粘贴截图]
