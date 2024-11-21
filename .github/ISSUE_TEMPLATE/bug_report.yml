@@ -1,6 +1,7 @@
 name: 为了快速解决你遇到的问题, 请使用此模板进行提问
 description: 运行wzry.py过程遇到的各种问题
 title: "[windows][雷电模拟器][问题描述]"
+label: "WZRY-RUN-Error"
 body:
   - type: markdown
     attributes:
@@ -13,11 +14,10 @@ body:
       description: "[使用文档WZRY.doc](https://cndaqiang.github.io/wzry.doc/)包含最新版本的使用教程、问题收录、使用经验. 每天都有更新. 请在阅读后再进行提问."
       options:
         - label: "我已阅读全新的[项目主页](https://cndaqiang.github.io/wzry.doc/)"
-          required: false
         - label: "我已阅读全新的[安装指南](https://cndaqiang.github.io/wzry.doc/guide/install/)"
-          required: false
         - label: "我已搜索[常见问题收录](https://cndaqiang.github.io/wzry.doc/qa/qa), 并未找到类似问题"
-          required: false
+    validations:
+      required: false
   - type: dropdown
     id: version
     attributes:
@@ -52,23 +52,3 @@ body:
         - prefix: wzry"
       validations:
         required: true
-  - type: input
-    attributes:
-      label: "Link to Appium Logs"
-      description: |
-        Create a [Gist](https://gist.github.com)—which contains your _full_ Appium logs—and link it here.  Alternatively, you can attach a logfile to this issue (drag it into the "Further Information" field below).
-
-        :warning: _Remember to redact or remove any sensitive information!_
-      placeholder: "https://gist.github.com/..."
-  - type: textarea
-    attributes:
-      label: Further Information
-      description: |
-        Links? References? Anything that will give us more context about the issue you are encountering!
-
-        _Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in._
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: ":stop_sign: _For support questions, please visit [http://discuss.appium.io](http://discuss.appium.io) instead._"
