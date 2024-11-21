@@ -23,7 +23,7 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: "你当前正在使用的程序以及版本号"
+      label: "请选择你在使用的程序及版本号"
       description: |
         - 请尽可能的使用最新的[stable版本](https://github.com/cndaqiang/WZRY/releases)
         - 请尽可能的升级airtest_mobileauto`python -m pip install airtest_mobileauto --upgrade`
@@ -52,13 +52,6 @@ body:
         mynode: 0
         totalnode: 2
         multiprocessing: True
-        BlueStackdir: C:\Program Files\BlueStacks_nxt
-        BlueStack_Instance:
-            0: Pie64_1
-            1: Pie64
-        BlueStack_Windows:
-            0: BlueStacks1
-            1: BlueStacks0
         LINK_dict:
             0: Android:///127.0.0.1:5565
             1: Android:///127.0.0.1:5555
@@ -75,27 +68,8 @@ body:
       value: |
         [此处支持: 填写文本、上传文件、粘贴截图]
         # 例如
-        uptime=23.9
-        self.对战时间=[1.0,uptime]
-        self.限时组队时间=uptime
-        # 选择对战线路和英雄
-        分路名称=["对抗", "打野","中路","发育","游走"]
-        线路坐标=[(-0.314, -0.26),  (-0.194, -0.26), (-0.069, -0.26), (0.037, -0.26),  (0.18, -0.26)]
-        位置坐标=[(6,5),(9,5),(4,4),(9,2),(2,4)]
-        index=(self.runstep+self.mynode)%len(分路名称)
-        TimeECHO(f"本次{self.runstep}对战分路: {分路名称[index]}")
-        #
-        #主战英雄
-        pos=位置坐标[index]
-        参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
-        self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "参战英雄头像", savepos=True)
-        self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "参战英雄线路", savepos=True)
-        #备战英雄, 因为对抗、打野、游走之间的英雄会互相冲突, 所以这些位置冲突的时候换成其他路(发育3,中路2)
-        index=[3,2,3,2,3][index]
-        pos=位置坐标[index]
-        参战英雄头像坐标=(-0.54+pos[0]*0.09,-0.31+pos[1]*0.11)
-        self.Tool.cal_record_pos(参战英雄头像坐标, self.移动端.resolution, "备战英雄头像", savepos=True)
-        self.Tool.cal_record_pos(线路坐标[index], self.移动端.resolution, "备战英雄线路", savepos=True)
+        self.对战时间=[1.0,23.9]
+        self.限时组队时间=23.9
     validations:
       required: true
   - type: textarea
@@ -110,23 +84,6 @@ body:
         [11-17 05:00:02]wzry0>ADB =(/home/cndaqiang/.local/lib/python3.10/site-packages/airtest/core/android/static/adb/linux/adb)
         [11-17 05:00:02]wzry0>LINK(Android:///127.0.0.1:5555)
         [11-17 05:00:02]wzry0>LINKhead(Android:///127.0.0.1)
-        [11-17 05:00:02]wzry0>LINKtype(android)
-        [11-17 05:00:02]wzry0>LINKURL(127.0.0.1:5555)
-        [11-17 05:00:02]wzry0>LINKport(5555)
-        [11-17 05:00:02]wzry0>Android:///127.0.0.1:5555:开始第1/3次连接
-        [11-17 05:00:10]wzry0>Android:///127.0.0.1:5555:链接失败
-        [11-17 05:00:14]wzry0>没有找到ADB设备127.0.0.1:5555
-        [11-17 05:10:41]wzry0>RUNINFO
-        [11-17 05:10:41]wzry0>	 组队模式 = True
-        [11-17 05:10:41]wzry0>	 房主 = True
-        [11-17 05:10:41]wzry0>	 对战模式 = 5v5匹配
-        [11-17 05:10:41]wzry0>	 对战时间 = [1.0,23.9]
-        [11-17 05:10:41]wzry0>	 限时组队时间 = 23.9
-        [11-17 05:10:41]wzry0>	 runstep = 119
-        [11-17 05:10:41]wzry0>	 jinristep = 1
-        [11-17 05:10:41]wzry0>	 青铜段位 = True
-        [11-17 05:10:41]wzry0>	 标准模式 = True
-        [11-17 05:10:41]wzry0>	 触摸对战 = True
     validations:
       required: true
   - type: textarea
