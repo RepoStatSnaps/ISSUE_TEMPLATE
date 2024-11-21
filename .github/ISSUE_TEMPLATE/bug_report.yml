@@ -31,24 +31,28 @@ body:
         - 其他
     validations:
       required: true
+  - type: text
+    id: other_version
+    attributes:
+      label: "如果选择了*其他*，请输入具体版本"
   - type: textarea
     attributes:
       label: "配置文件: `config.win.yaml`"
       description: "请在此处上传你的配置文件`config.win.yaml`截图或者粘贴到此处"
       value: |
-        - mynode: 0
-        - totalnode: 2
-        - multiprocessing: True
-        - BlueStackdir: C:\Program Files\BlueStacks_nxt
-        - BlueStack_Instance:
-        -     0: Pie64_1
-        -     1: Pie64
-        - BlueStack_Windows:
-        -     0: BlueStacks1
-        -     1: BlueStacks0
-        - LINK_dict:
-        -     0: Android:///127.0.0.1:5565
-        -     1: Android:///127.0.0.1:5555
-        - prefix: wzry"
+        mynode: 0
+        totalnode: 2
+        multiprocessing: True
+        BlueStackdir: C:\Program Files\BlueStacks_nxt
+        BlueStack_Instance:
+            0: Pie64_1
+            1: Pie64
+        BlueStack_Windows:
+            0: BlueStacks1
+            1: BlueStacks0
+        LINK_dict:
+            0: Android:///127.0.0.1:5565
+            1: Android:///127.0.0.1:5555
+        prefix: wzry"
     validations:
       required: true
