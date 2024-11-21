@@ -22,11 +22,13 @@ body:
     id: version
     attributes:
       label: "你当前正在使用的程序以及版本号"
-      description: "你遇到的问题, 可能在最新的[stable版本](https://github.com/cndaqiang/WZRY/releases)中已经被修复了."
+      description: |
+        - 请尽可能的使用最新的[stable版本](https://github.com/cndaqiang/WZRY/releases)
+        - 请尽可能的升级airtest_mobileauto`python -m pip install airtest_mobileauto --upgrade`
+        - 你遇到的问题, 可能在最新的版本中已经被修复了.
       options:
-        - WZRY >= 2.2.8
+        - WZRY == 2.2.9-stable
         - WZRY == 2.2.8-stable
-        - WZRY <= 2.2.6-stable
         - AutoWZRY >= 2.2.9a1
         - 其他
     validations:
@@ -35,7 +37,7 @@ body:
     id: other_version
     attributes:
       label: "如果选择了其他，请输入具体版本"
-      value: "WZRY-2.2.8"
+      value: "WZRY-2.2.6"
   - type: textarea
     attributes:
       label: "配置文件: config.win.yaml"
@@ -64,8 +66,9 @@ body:
   - type: textarea
     attributes:
       label: "控制文件: WZRY.0.运行模式.txt"
-      description: "请在此处填写或上传你的控制文件, 亦可截图粘贴到此处"
+      description: "请在此处填写或上传你的控制文件"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         # 例如
         uptime=23.9
         self.对战时间=[1.0,uptime]
@@ -93,8 +96,9 @@ body:
   - type: textarea
     attributes:
       label: "执行结果: result.0.txt"
-      description: "请在此处填写或上传你的执行结果, 亦可截图粘贴到此处"
+      description: "请在此处填写或上传你的执行结果"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         # 例如
         [11-17 05:00:02]wzry0>控制端(linux)
         [11-17 05:00:02]wzry0>客户端(lin_docker)
@@ -125,6 +129,7 @@ body:
       label: "运行目录截图"
       description: "请截图运行目录并粘贴到此处"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         例如
         ![image](https://github.com/user-attachments/assets/a2eb219b-f485-44fe-bff2-a2a757f3999c)
   - type: textarea
@@ -132,6 +137,7 @@ body:
       label: "模拟器设置页面"
       description: "请截图模拟器设置页面并粘贴到此处"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         如果问题不涉及模拟器, 可以不填写此输入框.
         如果你涉及到连接不了模拟器，无法控制模拟器的问题，请在此处粘贴你的模拟器设置页面.
         需要确定你开启了ADB以及ADB的端口以及分辨率和dpi的设置.
@@ -144,5 +150,6 @@ body:
       label: "游戏页面页面"
       description: "请截图游戏页面并粘贴到此处"
       value: |
+        [此处支持: 填写文本、上传文件、粘贴截图]
         如果在游戏过程中遇到问题, 请在此处粘贴**出现问题的画面**
         比如, 无法进入对战时, 游戏内显示的什么画面
