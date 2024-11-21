@@ -41,7 +41,7 @@ body:
       label: "配置文件: `config.win.yaml`"
       description: "请在此处上传你的配置文件`config.win.yaml`截图或者粘贴到此处"
       value: |
-      mynode: 0
+      "mynode: 0
       totalnode: 2
       multiprocessing: True
       BlueStackdir: C:\Program Files\BlueStacks_nxt
@@ -57,6 +57,6 @@ body:
       prefix: wzry
       logfile:
           0: result.0.txt
-          1: result.1.txt
+          1: result.1.txt"
     validations:
       required: true
