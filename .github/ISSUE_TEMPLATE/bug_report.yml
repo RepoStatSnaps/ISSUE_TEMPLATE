@@ -39,10 +39,10 @@ body:
     attributes:
       label: "配置文件: `config.win.yaml`"
       description: "请在此处上传你的配置文件`config.win.yaml`截图或者粘贴到此处"
-      value: |
-        mynode: 0
-        LINK_dict:
-            0: Android:///127.0.0.1:5565
-        prefix: wzry
+      value:
+        - mynode: 0
+        - LINK_dict:
+        -     0: Android:///127.0.0.1:5565
+        - prefix: wzry
     validations:
       required: true
