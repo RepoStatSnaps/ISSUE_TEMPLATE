@@ -48,8 +48,6 @@ body:
         [此处支持: 填写文本、上传文件、粘贴截图]
         # 例如
         运行之后,很快接黑屏了,我怎么查看运行报错的信息
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: "配置文件: config.win.yaml"
