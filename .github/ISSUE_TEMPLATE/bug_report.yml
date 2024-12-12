@@ -18,8 +18,6 @@ body:
         - label: "🌱已阅读[配置文件的说明](https://wzry-doc.pages.dev/guide/config/)"
         - label: "🌱已阅读[控制文件的使用方法: 运行时间、礼包功能、对战模式、选择英雄等](https://wzry-doc.pages.dev/guide/file/)"
         - label: "🌱已阅读[常见问题](https://wzry-doc.pages.dev/qa/qa)"
-    validations:
-      required: false
   - type: dropdown
     id: version
     attributes:
